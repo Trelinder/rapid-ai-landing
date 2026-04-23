@@ -6,7 +6,7 @@ function AboutPage() {
       <section className="page-hero">
         <h1>About Us</h1>
         <p className="page-sub">
-          Byron C Linder LLC is an IT consultancy based in Chester, PA,
+          RAPID AI CONSULTANTS is an IT consultancy based in Chester, PA,
           dedicated to making enterprise-grade AI accessible to every business.
         </p>
       </section>

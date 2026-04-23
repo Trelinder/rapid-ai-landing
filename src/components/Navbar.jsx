@@ -5,7 +5,7 @@ function Navbar() {
   return (
     <nav id="navbar">
       <NavLink to="/" id="nav-brand">
-        Byron C Linder LLC
+        RAPID AI CONSULTANTS
       </NavLink>
       <ul id="nav-links">
         <li>

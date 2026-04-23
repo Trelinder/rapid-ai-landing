@@ -51,7 +51,7 @@ function LandingPage() {
   return (
     <section id="landing">
       <header id="landing-header">
-        <h1>Byron C Linder LLC</h1>
+        <h1>RAPID AI CONSULTANTS</h1>
         <p className="tagline">
           AI-powered IT consulting for Chester, PA and beyond.
         </p>
