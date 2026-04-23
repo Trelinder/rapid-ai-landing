@@ -1,0 +1,155 @@
+/* ── LandingPage layout ─────────────────────────────────────── */
+#landing {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  padding: 48px 32px;
+  flex-grow: 1;
+
+  @media (max-width: 1024px) {
+    padding: 32px 20px;
+    gap: 40px;
+  }
+}
+
+/* ── Header ─────────────────────────────────────────────────── */
+#landing-header {
+  text-align: center;
+}
+
+#landing-header h1 {
+  margin: 0 0 12px;
+}
+
+.tagline {
+  font-size: 20px;
+  color: var(--text);
+
+  @media (max-width: 1024px) {
+    font-size: 17px;
+  }
+}
+
+/* ── Services grid ───────────────────────────────────────────── */
+#services {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.service-card {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 28px 24px;
+  text-align: left;
+  background: var(--social-bg);
+  transition: box-shadow 0.3s;
+
+  &:hover {
+    box-shadow: var(--shadow);
+  }
+
+  h2 {
+    margin-top: 0;
+  }
+}
+
+/* ── Lead capture form ───────────────────────────────────────── */
+#lead-capture {
+  max-width: 560px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: left;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 8px;
+  }
+
+  > p {
+    text-align: center;
+    margin-bottom: 28px;
+  }
+}
+
+#lead-capture form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+#lead-capture label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-h);
+  margin-bottom: 2px;
+}
+
+#lead-capture input,
+#lead-capture textarea {
+  font-family: var(--sans);
+  font-size: 16px;
+  color: var(--text-h);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 10px 12px;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.25s;
+
+  &:focus {
+    outline: none;
+    border-color: var(--accent);
+  }
+}
+
+#lead-capture textarea {
+  resize: vertical;
+}
+
+#lead-capture button[type='submit'] {
+  align-self: flex-start;
+  font-family: var(--sans);
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  background: var(--accent);
+  border: none;
+  border-radius: 6px;
+  padding: 10px 24px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+
+  &:hover:not(:disabled) {
+    opacity: 0.85;
+  }
+
+  &:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+  }
+}
+
+.form-feedback {
+  border-radius: 6px;
+  padding: 10px 14px;
+  font-size: 15px;
+  margin-bottom: 12px;
+
+  &.success {
+    background: rgba(34, 197, 94, 0.12);
+    color: #16a34a;
+    border: 1px solid rgba(34, 197, 94, 0.3);
+  }
+
+  &.error {
+    background: rgba(239, 68, 68, 0.1);
+    color: #dc2626;
+    border: 1px solid rgba(239, 68, 68, 0.25);
+  }
+}
