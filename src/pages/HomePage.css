@@ -1,0 +1,115 @@
+@import './shared.css';
+
+/* ── Home page ───────────────────────────────────────────────── */
+#home-page {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  flex-grow: 1;
+}
+
+/* ── Hero ────────────────────────────────────────────────────── */
+#hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 72px 32px 64px;
+  border-bottom: 1px solid var(--border);
+
+  h1 {
+    margin: 0 0 16px;
+  }
+
+  @media (max-width: 1024px) {
+    padding: 48px 20px 40px;
+  }
+}
+
+.hero-sub {
+  font-size: 20px;
+  max-width: 620px;
+  color: var(--text);
+  margin-bottom: 36px;
+
+  @media (max-width: 1024px) {
+    font-size: 17px;
+    margin-bottom: 28px;
+  }
+}
+
+#hero-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* ── Home services section ───────────────────────────────────── */
+#home-services {
+  padding: 56px 32px;
+  border-bottom: 1px solid var(--border);
+  text-align: center;
+
+  h2 {
+    margin-bottom: 32px;
+  }
+
+  @media (max-width: 1024px) {
+    padding: 40px 20px;
+  }
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  text-align: left;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.service-card {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 28px 24px;
+  background: var(--social-bg);
+  transition: box-shadow 0.3s;
+
+  &:hover {
+    box-shadow: var(--shadow);
+  }
+
+  h3 {
+    font-family: var(--heading);
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-h);
+    margin: 0 0 10px;
+  }
+}
+
+/* ── Home CTA band ───────────────────────────────────────────── */
+#home-cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 64px 32px;
+  gap: 16px;
+  background: var(--accent-bg);
+
+  h2 {
+    margin: 0;
+  }
+
+  p {
+    max-width: 560px;
+  }
+
+  @media (max-width: 1024px) {
+    padding: 40px 20px;
+  }
+}
