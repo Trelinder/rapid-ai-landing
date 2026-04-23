@@ -1,0 +1,65 @@
+@import './shared.css';
+
+/* ── Services page ───────────────────────────────────────────── */
+#services-page {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+#services-list {
+  padding: 48px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 860px;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+
+  @media (max-width: 1024px) {
+    padding: 32px 20px;
+  }
+}
+
+.service-detail-card {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 32px 28px;
+  background: var(--social-bg);
+  transition: box-shadow 0.3s;
+  text-align: left;
+
+  &:hover {
+    box-shadow: var(--shadow);
+  }
+
+  h2 {
+    margin-bottom: 12px;
+    color: var(--text-h);
+  }
+
+  p {
+    line-height: 165%;
+    margin-bottom: 16px;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  li {
+    font-size: 14px;
+    background: var(--accent-bg);
+    color: var(--accent);
+    border: 1px solid var(--accent-border);
+    border-radius: 20px;
+    padding: 4px 12px;
+    font-weight: 500;
+  }
+}

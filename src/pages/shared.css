@@ -1,0 +1,61 @@
+/* ── Shared page hero ────────────────────────────────────────── */
+.page-hero {
+  text-align: center;
+  padding: 48px 32px 24px;
+  border-bottom: 1px solid var(--border);
+
+  h1 {
+    margin: 0 0 12px;
+  }
+
+  @media (max-width: 1024px) {
+    padding: 32px 20px 20px;
+  }
+}
+
+.page-sub {
+  font-size: 19px;
+  max-width: 680px;
+  margin: 0 auto;
+  color: var(--text);
+
+  @media (max-width: 1024px) {
+    font-size: 16px;
+  }
+}
+
+/* ── Shared buttons ──────────────────────────────────────────── */
+.btn-primary {
+  display: inline-block;
+  font-family: var(--sans);
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  background: var(--accent);
+  border-radius: 6px;
+  padding: 11px 28px;
+  text-decoration: none;
+  transition: opacity 0.2s;
+
+  &:hover {
+    opacity: 0.85;
+  }
+}
+
+.btn-secondary {
+  display: inline-block;
+  font-family: var(--sans);
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text-h);
+  background: var(--social-bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 10px 24px;
+  text-decoration: none;
+  transition: box-shadow 0.2s;
+
+  &:hover {
+    box-shadow: var(--shadow);
+  }
+}
