@@ -27,7 +27,7 @@
 - Tone: professional, concise, and confident. Avoid filler phrases.
 
 ## FastAPI Integration
-- The FastAPI backend exposes a `POST /leads` endpoint that accepts `{ name, email, message }`.
+- The FastAPI backend exposes a `POST /api/leads` endpoint that accepts `{ name, email, phone, business_name }`.
 - Use the `VITE_API_URL` env variable for the base URL (e.g. `http://localhost:8000`).
 - Always handle both network-level failures and HTTP error status codes, and surface a user-friendly message in the UI.
 

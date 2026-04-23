@@ -3,7 +3,12 @@ import { useState } from 'react'
 const API_URL = import.meta.env.VITE_API_URL || ''
 
 function LandingPage() {
-  const [form, setForm] = useState({ name: '', email: '', message: '' })
+  const [form, setForm] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    business_name: '',
+  })
   const [status, setStatus] = useState(null) // 'success' | 'error' | null
   const [errorMsg, setErrorMsg] = useState('')
   const [submitting, setSubmitting] = useState(false)
@@ -19,7 +24,7 @@ function LandingPage() {
     setErrorMsg('')
 
     try {
-      const response = await fetch(`${API_URL}/leads`, {
+      const response = await fetch(`${API_URL}/api/leads`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(form),
@@ -31,7 +36,7 @@ function LandingPage() {
       }
 
       setStatus('success')
-      setForm({ name: '', email: '', message: '' })
+      setForm({ name: '', email: '', phone: '', business_name: '' })
     } catch (err) {
       setStatus('error')
       setErrorMsg(
@@ -77,7 +82,10 @@ function LandingPage() {
 
       <div id="lead-capture">
         <h2>Get in Touch</h2>
-        <p>Tell us about your project and we&apos;ll reach out within one business day.</p>
+        <p>
+          Tell us about your project and we&apos;ll reach out within one
+          business day.
+        </p>
 
         {status === 'success' && (
           <p className="form-feedback success">
@@ -113,15 +121,28 @@ function LandingPage() {
             placeholder="jane@example.com"
           />
 
-          <label htmlFor="message">Message</label>
-          <textarea
-            id="message"
-            name="message"
-            rows={4}
+          <label htmlFor="phone">Phone</label>
+          <input
+            id="phone"
+            name="phone"
+            type="tel"
             required
-            value={form.message}
+            autoComplete="tel"
+            value={form.phone}
             onChange={handleChange}
-            placeholder="Describe your project or question…"
+            placeholder="+1 (555) 000-0000"
+          />
+
+          <label htmlFor="business_name">Business Name</label>
+          <input
+            id="business_name"
+            name="business_name"
+            type="text"
+            required
+            autoComplete="organization"
+            value={form.business_name}
+            onChange={handleChange}
+            placeholder="Acme Corp"
           />
 
           <button type="submit" disabled={submitting}>
