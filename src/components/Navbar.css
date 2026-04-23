@@ -67,20 +67,20 @@
 }
 
 #nav-cta {
-  background: var(--accent) !important;
-  color: #fff !important;
-  padding: 7px 16px !important;
+  background: var(--accent);
+  color: var(--color-white);
+  padding: 7px 16px;
   border-radius: 6px;
-  font-weight: 600 !important;
-  transition: opacity 0.2s !important;
+  font-weight: 600;
+  transition: opacity 0.2s;
 
   &:hover {
     opacity: 0.85;
-    background: var(--accent) !important;
-    color: #fff !important;
+    background: var(--accent);
+    color: var(--color-white);
   }
 
   &.active {
-    color: #fff !important;
+    color: var(--color-white);
   }
 }
